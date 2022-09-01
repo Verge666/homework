@@ -1,12 +1,17 @@
 ﻿Console.WriteLine("введите пятизначное число");
-string n = Console.ReadLine();
-if ((int.Parse(n) > 99999 ) || (int.Parse(n) < 10000))
+int n = int.Parse(Console.ReadLine());
+int n1 = (n % 100000)/10000;
+int n2 = (n % 10000)/1000;
+int n4 = (n % 100)/10;
+int n5 = n % 10;
+Console.WriteLine(n1);
+if ((n > 99999 ) || (n < 10000))
     {
         Console.WriteLine("введенное число не пятизначное");
     }
 else
     {
-    if ((n[0] == n [4]) && (n[1] == n[3]))
+    if ((n1 == n5) && (n2 == n4))
         {
             Console.WriteLine("число " + n + " является палиндромом");
         }
